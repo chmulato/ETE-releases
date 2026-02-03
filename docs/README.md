@@ -9,6 +9,7 @@ Esta pasta é o **site estático** do projeto ETE, publicado em **https://chmula
 - **apostila_efluentes.html** — Apostila de Tratamento de Efluentes (lodos ativados, ETE).
 - **artigo_ete_v3.html** — Artigo executivo: convergência entre saneamento e hidrometalurgia de terras raras.
 - **laboratorio_campo_largo.html** — Laboratório Campo Largo: Ouro 4.0 (IFPR), dedicatória Prof. Pawlowsky (UFPR).
+- **canal-feedback.html** — Canal de Melhorias (WhatsApp, Telegram, e-mail) para sugestões, bugs e insights.
 - **download.html** — Página de download do instalador Minerador 4.0 (link para Releases).
 - **assets/** — CSS, imagens (`img/`, `images/`), JS, PDF (Manual de Iniciação Ouro 4.0).
 
