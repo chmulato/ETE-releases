@@ -4,7 +4,7 @@ Esta pasta é o **site estático** do projeto ETE, publicado em **https://chmula
 
 ## Conteúdo
 
-- **index.html** — Página inicial do portal (Simulador de Hidrometalurgia Seletiva, links para Laboratório Ouro 4.0, apostilas, artigo, código-fonte e releases).
+- **index.html** — Página inicial do portal (Simulador de Hidrometalurgia Seletiva, links para Laboratório Ouro 4.0, apostilas, artigo, Canal de Melhorias e releases).
 - **index_v2.html** — Apostila: Fundamentos de Hidrometalurgia de Terras Raras.
 - **apostila_efluentes.html** — Apostila de Tratamento de Efluentes (lodos ativados, ETE).
 - **artigo_ete_v3.html** — Artigo executivo: convergência entre saneamento e hidrometalurgia de terras raras.
@@ -21,4 +21,4 @@ Esta pasta é o **site estático** do projeto ETE, publicado em **https://chmula
 
 - Site: https://chmulato.github.io/ETE-releases/
 - Releases (.exe): https://github.com/chmulato/ETE-releases/releases
-- Código-fonte: https://github.com/chmulato/ETE
+- Código-fonte do simulador: proprietário (não público).

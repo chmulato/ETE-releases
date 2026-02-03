@@ -7,7 +7,7 @@ Repositório **público** [chmulato/ETE-releases](https://github.com/chmulato/ET
 - **Produto:** Simulador de dimensionamento de **ETE** — **Hidrometalurgia Seletiva de Terras Raras**. Metodologia que conecta saneamento (ETE) à viabilidade em mineração. Desenvolvido em Python + SQLite, **100% offline**.
 - **Aplicativo desktop:** **Minerador 4.0** — centro de controle gamificado (Campo, Lab, Mercado), motor ETE real, interface Sci-Fi/HUD, fases Ambiental e Mineração, Selo de Qualidade Pawlowsky, Biblioteca Digital, Galeria Estratégica, Coleta de Visão (feedback LGPD-compliant), paywall "The Golden Gate" para fase Premium.
 
-O código-fonte, testes e documentação de desenvolvimento estão no repositório de desenvolvimento: **[chmulato/ETE](https://github.com/chmulato/ETE)**.
+O **código-fonte do simulador é proprietário** (trabalho profissional); não é público. Uso e distribuição conforme a LICENSE deste repositório.
 
 ## Conteúdo deste repositório
 
@@ -22,10 +22,9 @@ O código-fonte, testes e documentação de desenvolvimento estão no repositór
 |--------|-----|
 | **Site público (portal)** | https://chmulato.github.io/ETE-releases/ |
 | **Releases (instalador .exe)** | https://github.com/chmulato/ETE-releases/releases |
-| **Código-fonte (desenvolvimento)** | https://github.com/chmulato/ETE |
 
 ## Como usar
 
 - **Navegar no portal:** acesse [chmulato.github.io/ETE-releases](https://chmulato.github.io/ETE-releases/).
 - **Baixar o Minerador 4.0:** vá em [Releases](https://github.com/chmulato/ETE-releases/releases), baixe `Minerador40.exe` e, se desejar, o `checksum.sha256` para verificar a integridade. Consulte o `INSTALACAO.md` do release para instalação e uso.
-- **Contribuir com código ou documentação do projeto:** use o repositório [chmulato/ETE](https://github.com/chmulato/ETE).
+- **Sugestões e feedback:** use o [Canal de Melhorias](https://chmulato.github.io/ETE-releases/canal-feedback.html) (portal).
