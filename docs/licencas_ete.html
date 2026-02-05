@@ -100,15 +100,26 @@
     tr.separator td::after {
       content: " ---";
     }
+    #tabela-licencas thead th:nth-child(1) { width: 140px; }
+    #tabela-licencas thead th:nth-child(3) { width: 140px; }
+
+    .toolbar {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+    }
+    .toolbar-hint { font-size: 0.8rem; color: var(--ink-muted); }
+    .btn-outline { border: 1px solid var(--border); background: var(--bg-paper); }
+    .file-input-label { cursor: pointer; }
 
     .cell-datetime { white-space: nowrap; }
-    .cell-id-pedido { font-weight: 600; }
     .cell-hardware-id {
       font-size: 12px;
       letter-spacing: 0.02em;
       word-break: break-all;
     }
-    .cell-valor { white-space: nowrap; }
     .cell-status {
       font-weight: 600;
       padding: 4px 10px;
@@ -169,14 +180,20 @@
       <strong>LGPD:</strong> Esta página não armazena nomes, CPFs ou contatos. Apenas identificadores de máquina (Hardware ID anônimo) e dados necessários ao controle de licenças.
     </div>
 
+    <div class="toolbar">
+      <label class="file-input-label">
+        <span class="btn btn-outline">Carregar log de pedidos (JSON)</span>
+        <input type="file" id="input-log" accept=".json" hidden>
+      </label>
+      <span class="toolbar-hint" id="hint-origem">Dados da sessão</span>
+    </div>
+
     <table id="tabela-licencas">
       <thead>
         <tr>
           <th>Data/Hora</th>
-          <th>ID do Pedido</th>
           <th>Hardware ID Anônimo</th>
-          <th>Valor</th>
-          <th>Status do Pagamento</th>
+          <th>Status</th>
           <th>Ações</th>
         </tr>
       </thead>
@@ -186,7 +203,7 @@
     </table>
 
     <footer>
-      Painel administrativo simplificado · Dados ordenados do mais recente ao mais antigo · Contabilidade mensal por separadores.
+      Painel de auditoria · LGPD Resguardo: exibição apenas Data/Hora, Hardware ID anônimo e Status. Ordem decrescente; blocos mensais para fechamento contábil.
     </footer>
   </div>
 
@@ -241,6 +258,42 @@
         }
         return grupos;
       }
+
+      function carregarDeArquivo(file) {
+        const reader = new FileReader();
+        reader.onload = function () {
+          try {
+            const raw = reader.result;
+            const data = typeof raw === 'string' ? JSON.parse(raw) : raw;
+            const lista = Array.isArray(data) ? data : (data.pedidos || data.registros || []);
+            if (!Array.isArray(lista) || lista.length === 0) {
+              alert('Formato inválido. Esperado: JSON com array de objetos { dataHora, hardwareId, status [, id, chave ] }.');
+              return;
+            }
+            pedidos = lista.map(function (r) {
+              return {
+                id: r.id || 'PED-' + Date.now() + '-' + Math.random().toString(36).slice(2, 6),
+                dataHora: r.dataHora || r.data_hora || r.timestamp || new Date().toISOString(),
+                hardwareId: r.hardwareId || r.hardware_id || r.hid || '',
+                valor: r.valor != null ? r.valor : 'R$ 29,90',
+                status: r.status || r.Status || 'Em Aberto',
+                chave: r.chave || null
+              };
+            });
+            persist();
+            renderizar();
+            document.getElementById('hint-origem').textContent = 'Carregado: ' + (file && file.name ? file.name : 'arquivo');
+          } catch (e) {
+            alert('Erro ao ler o arquivo: ' + (e.message || 'formato inválido'));
+          }
+        };
+        reader.readAsText(file);
+      }
+
+      document.getElementById('input-log').addEventListener('change', function () {
+        const f = this.files && this.files[0];
+        if (f) carregarDeArquivo(f);
+      });
 
       async function gerarChaveAtivacao(hardwareId) {
         const validUntil = '2099-12-31';
@@ -305,7 +358,7 @@
           if (item.tipo === 'separador') {
             const tr = document.createElement('tr');
             tr.className = 'separator';
-            tr.innerHTML = `<td colspan="6">${item.label}</td>`;
+            tr.innerHTML = '<td colspan="4">' + item.label + '</td>';
             tbody.appendChild(tr);
             continue;
           }
@@ -314,16 +367,14 @@
           const isConfirmado = p.status === 'Confirmado/Ativo';
           const statusClass = isConfirmado ? 'status-confirmado' : 'status-aberto';
           const botoes = isConfirmado
-            ? `<button type="button" class="btn btn-copiar" data-id="${p.id}">Copiar Chave para WhatsApp</button>`
-            : `<button type="button" class="btn btn-confirmar" data-id="${p.id}">Confirmar Pagamento</button>`;
-          const chavePreview = p.chave ? `<div class="chave-preview" title="${p.chave.replace(/"/g, '&quot;')}">${p.chave}</div>` : '';
+            ? '<button type="button" class="btn btn-copiar" data-id="' + p.id + '">Copiar Chave para WhatsApp</button>'
+            : '<button type="button" class="btn btn-confirmar" data-id="' + p.id + '">Confirmar Pagamento</button>';
+          const chavePreview = p.chave ? '<div class="chave-preview" title="' + (p.chave.replace(/"/g, '&quot;')) + '">' + p.chave + '</div>' : '';
           tr.innerHTML =
-            `<td class="cell-datetime">${formatarDataHora(p.dataHora)}</td>` +
-            `<td class="cell-id-pedido">${p.id}</td>` +
-            `<td class="cell-hardware-id">${p.hardwareId}</td>` +
-            `<td class="cell-valor">${p.valor}</td>` +
-            `<td><span class="cell-status ${statusClass}">${p.status}</span></td>` +
-            `<td class="cell-acoes">${botoes}${chavePreview}</td>`;
+            '<td class="cell-datetime">' + formatarDataHora(p.dataHora) + '</td>' +
+            '<td class="cell-hardware-id">' + p.hardwareId + '</td>' +
+            '<td><span class="cell-status ' + statusClass + '">' + p.status + '</span></td>' +
+            '<td class="cell-acoes">' + botoes + chavePreview + '</td>';
           tbody.appendChild(tr);
         }
 

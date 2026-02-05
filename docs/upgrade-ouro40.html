@@ -49,6 +49,20 @@
         .pix-box .name { font-size: 1.1rem; font-weight: 600; color: var(--text); margin-bottom: 6px; }
         .pix-box .cnpj { font-family: ui-monospace, monospace; font-size: 1rem; color: var(--gold); letter-spacing: 0.02em; }
         .pix-box .hint { font-size: 0.8rem; color: var(--dim); margin-top: 10px; }
+        .pix-box .valor { font-size: 1.1rem; font-weight: 600; color: var(--green); margin-top: 8px; }
+        .btn-whatsapp {
+            font-family: inherit;
+            background: #25d366;
+            color: #fff;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        .btn-whatsapp:hover { filter: brightness(1.1); }
+        .hint-whatsapp { font-size: 0.8rem; color: var(--dim); margin-top: 8px; line-height: 1.4; }
         .steps { list-style: none; }
         .steps li { position: relative; padding-left: 28px; margin-bottom: 14px; font-size: 0.9rem; color: var(--text); line-height: 1.5; }
         .steps li::before { content: attr(data-step); position: absolute; left: 0; width: 22px; height: 22px; border-radius: 50%; background: var(--cyan); color: var(--bg); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; justify-content: center; }
@@ -69,12 +83,15 @@
 
         <div class="block">
             <h2>Pagamento PIX</h2>
-            <p>Utilize a chave PIX (CNPJ) abaixo para realizar o pagamento. Valor e condições conforme combinado no canal de vendas (WhatsApp ou Telegram).</p>
-            <div class="pix-box">
+            <p>Utilize a chave PIX (CNPJ) abaixo para realizar o pagamento. Valor único do upgrade:</p>
+            <div class="pix-box" id="pix-box">
                 <div class="name">Cara-Core Informática</div>
-                <div class="cnpj">23.969.028/0001-37</div>
+                <div class="cnpj" id="display-cnpj">23.969.028/0001-37</div>
+                <div class="valor" id="display-valor">R$ 29,90</div>
                 <p class="hint">Chave PIX: CNPJ — copie e cole no app do seu banco</p>
             </div>
+            <p style="margin-top: 12px;"><button type="button" class="btn-whatsapp" id="btn-copiar-whatsapp">Copiar Hardware ID para WhatsApp</button></p>
+            <p class="hint-whatsapp">Copie a mensagem pronta e, no simulador, use «Copiar ID de Ativação»; depois cole o ID na mensagem e envie com o comprovante PIX.</p>
         </div>
 
         <div class="block">
@@ -94,10 +111,35 @@
         <p class="lgpd">
             <strong>Privacidade (LGPD):</strong> O ID de Ativação não contém dados pessoais; é um identificador anônimo da máquina. A associação entre esse ID e a pessoa (para envio da chave e controle comercial) fica apenas no nosso controle financeiro externo (ERP/planilha privada). O software não armazena dados sensíveis no binário.
         </p>
+        <p class="lgpd">
+            <strong>Termos de Uso e Créditos:</strong> A ativação da versão Premium implica aceitação dos <a href="termos-uso-creditos.html" style="color: var(--cyan);">Termos de Uso e Créditos</a> (atribuição ao Prof. Pawlowsky, propriedade da Cara-Core Informática, isenção de responsabilidade e uso de imagem).
+        </p>
 
         <p class="nav-links">
             <a href="index.html">← Voltar ao portal</a> · <a href="download.html">Download Minerador 4.0</a> · <a href="canal-feedback.html">Canal de Melhorias</a>
         </p>
     </div>
+
+    <script>
+        (function() {
+            var CONFIG = {
+                CNPJ: '23.969.028/0001-37',
+                VALOR: 29.90
+            };
+            document.getElementById('display-cnpj').textContent = CONFIG.CNPJ;
+            document.getElementById('display-valor').textContent = 'R$ ' + CONFIG.VALOR.toFixed(2).replace('.', ',');
+            document.getElementById('btn-copiar-whatsapp').onclick = function() {
+                var msg = 'Olá! Quero o upgrade para Ouro 4.0 (Módulo Mineração).\n' +
+                    'Valor: R$ ' + CONFIG.VALOR.toFixed(2).replace('.', ',') + '\n' +
+                    'Meu ID de Ativação: [cole aqui o ID copiado do simulador]\n' +
+                    'Envio o comprovante PIX em seguida.';
+                navigator.clipboard.writeText(msg).then(function() {
+                    var btn = document.getElementById('btn-copiar-whatsapp');
+                    btn.textContent = 'Mensagem copiada!';
+                    setTimeout(function() { btn.textContent = 'Copiar Hardware ID para WhatsApp'; }, 2500);
+                }).catch(function() { alert('Não foi possível copiar.'); });
+            };
+        })();
+    </script>
 </body>
 </html>
