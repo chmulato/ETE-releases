@@ -43,13 +43,13 @@ Referência de implementação: [ARQUITETURA_SIMBIOSE_AMBIENTAL_MINERACAO.md](AR
   - **CNPJ exibido dinamicamente:** 23.969.028/0001-37 (configurável via constante).
   - **Valor configurável:** Constante `PREMIUM_PRICE` ou `CONFIG.VALOR` (ex.: 29.90) exibida em “R$ 29,90”.
 - **Botão “Copiar Hardware ID para WhatsApp”:** Gera mensagem pronta (valor + ID de Ativação + texto para envio com comprovante PIX), reduzindo a fricção entre desejo de compra e confirmação do PIX.
-- Página estática de referência: [upgrade-ouro40.html](https://chmulato.github.io/ETE-releases/upgrade-ouro40.html).
+- Página estática de referência: [upgrade-ouro40.html](https://chmulato.github.io/caracore-ete-releases/upgrade-ouro40.html).
 
 ---
 
 ## 4. Visualização de dados e legado
 
-- **Gráficos de intersecção matemática:** No painel principal (protótipo [painel-simbiotico.html](https://chmulato.github.io/ETE-releases/painel-simbiotico.html)) estão integrados:
+- **Gráficos de intersecção matemática:** No painel principal (protótipo [painel-simbiotico.html](https://chmulato.github.io/caracore-ete-releases/painel-simbiotico.html)) estão integrados:
   - **Titulação pH** (curva pH × volume de titulante; ponto de equivalência).
   - **Solubilidade × pH** (curva de solubilidade em função do pH).
   Esses gráficos refletem as equações e o legado científico (Pawlowsky).
@@ -63,4 +63,4 @@ Referência de implementação: [ARQUITETURA_SIMBIOSE_AMBIENTAL_MINERACAO.md](AR
 - **Sistema coeso:** Um único produto onde a ciência do Prof. Pawlowsky encontra a viabilidade comercial da Cara-Core.
 - **Experiência:** Fluida (fluxo Ambiental → Mineração claro), segura (license.key, LGPD, sem dados sensíveis na interface de auditoria) e educativa (gráficos de intersecção, selo de qualidade, narrativa “da água ao mineral”).
 
-Implementações de código (Python, Streamlit, HID, validador, audit log) ficam no repositório **chmulato/ETE**; o portal **ETE-releases** mantém as páginas estáticas, o painel de licenças e os protótipos de referência.
+Implementações de código (Python, Streamlit, HID, validador, audit log) ficam no repositório **chmulato/ETE**; o portal **caracore-ete-releases** mantém as páginas estáticas, o painel de licenças e os protótipos de referência.

@@ -1,8 +1,8 @@
 # Páginas Web - GitHub Pages
 
-Esta pasta contém os arquivos HTML que serão publicados no GitHub Pages (repositório público **chmulato/ETE-releases**).
+Esta pasta contém os arquivos HTML que serão publicados no GitHub Pages (repositório público **chmulato/caracore-ete-releases**).
 
-**Portal publicado em:** [https://chmulato.github.io/ETE-releases/](https://chmulato.github.io/ETE-releases/)
+**Portal publicado em:** [https://chmulato.github.io/caracore-ete-releases/](https://chmulato.github.io/caracore-ete-releases/)
 
 ## Estrutura
 

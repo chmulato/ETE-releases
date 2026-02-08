@@ -60,7 +60,7 @@ Para exibição na seção **Termos de Uso e Créditos** do software e antes da 
 
 ## 6. Ação no software (implementação)
 
-- **Seção "Termos de Uso e Créditos":** Acessível pelo **Selo de Qualidade Pawlowsky** em todas as telas em que o selo apareça. No portal ETE-releases, o selo é um link para a página [termos-uso-creditos.html](https://chmulato.github.io/ETE-releases/termos-uso-creditos.html).
+- **Seção "Termos de Uso e Créditos":** Acessível pelo **Selo de Qualidade Pawlowsky** em todas as telas em que o selo apareça. No portal caracore-ete-releases, o selo é um link para a página [termos-uso-creditos.html](https://chmulato.github.io/caracore-ete-releases/termos-uso-creditos.html).
 - **Exibição antes da primeira ativação Premium:** O texto dos Termos de Uso e Créditos (resumo ou integral) deve ser exibido de forma **clara** antes da primeira ativação da versão Premium (R$ 29,90). No protótipo do painel simbiótico, isso é feito por meio de um modal exibido ao clicar em "Simular ativação" (ou, no app real, antes de validar a license.key pela primeira vez), com opção "Li e aceito" e botão "Continuar para ativação". O aceite pode ser persistido localmente (ex.: `ouro40_terms_accepted`) para não solicitar novamente no mesmo dispositivo.
 
 No simulador chmulato/ETE, repetir a mesma lógica: exibir termos antes da primeira ativação Premium e disponibilizar o texto completo via Selo de Qualidade.

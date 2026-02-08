@@ -2,7 +2,7 @@
 
 Especificação de produto e HMI para harmonizar os ecossistemas ETE Ambiental e ETE Mineração em uma **única interface simbiótica**, com foco em conversão e sensação de jornada incompleta sem o módulo pago.
 
-**Implementação:** Repositório chmulato/ETE (simulador). Protótipo de referência no portal: [painel-simbiotico.html](https://chmulato.github.io/ETE-releases/painel-simbiotico.html).
+**Implementação:** Repositório chmulato/ETE (simulador). Protótipo de referência no portal: [painel-simbiotico.html](https://chmulato.github.io/caracore-ete-releases/painel-simbiotico.html).
 
 ---
 

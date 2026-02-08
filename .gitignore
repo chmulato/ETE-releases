@@ -1,4 +1,4 @@
-# ETE-releases: comitar somente arquivos estáticos (portal em docs/, README, LICENSE).
+# caracore-ete-releases: comitar somente arquivos estáticos (portal em docs/, README, LICENSE).
 # Ignorar IDE, OS, gerados e temporários.
 
 # Cursor: regras somente locais (não versionar)

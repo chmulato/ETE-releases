@@ -1,6 +1,6 @@
 # Especificação: Camada comercial e licenciamento — Ouro 4.0 (ETE)
 
-Este documento descreve a arquitetura de **paywall educativo**, **identificação de máquina (HID)**, **validador de licença offline** e **dashboard de gestão** para o simulador chmulato/ETE. A implementação é feita no **repositório ETE** (código-fonte); o portal ETE-releases expõe a página de upgrade e as instruções ao usuário.
+Este documento descreve a arquitetura de **paywall educativo**, **identificação de máquina (HID)**, **validador de licença offline** e **dashboard de gestão** para o simulador chmulato/ETE. A implementação é feita no **repositório ETE** (código-fonte); o portal caracore-ete-releases expõe a página de upgrade e as instruções ao usuário.
 
 **Objetivo:** Fase Ambiental = isca de valor (gratuita); Fase Mineração = joia da coroa (monetizada). Conformidade LGPD: nenhum dado pessoal sensível dentro do binário.
 
@@ -89,10 +89,10 @@ Este documento descreve a arquitetura de **paywall educativo**, **identificaçã
 
 ---
 
-## 7. Referências no portal ETE-releases
+## 7. Referências no portal caracore-ete-releases
 
-- **Página de upgrade (checkout):** [upgrade-ouro40.html](https://chmulato.github.io/ETE-releases/upgrade-ouro40.html) — dados PIX, instruções e LGPD.
-- **Canal de Melhorias:** [canal-feedback.html](https://chmulato.github.io/ETE-releases/canal-feedback.html) — WhatsApp, Telegram e e-mail para envio do ID e comprovante.
+- **Página de upgrade (checkout):** [upgrade-ouro40.html](https://chmulato.github.io/caracore-ete-releases/upgrade-ouro40.html) — dados PIX, instruções e LGPD.
+- **Canal de Melhorias:** [canal-feedback.html](https://chmulato.github.io/caracore-ete-releases/canal-feedback.html) — WhatsApp, Telegram e e-mail para envio do ID e comprovante.
 
 A implementação dos módulos Python (HID, validador, gerador de chaves) e da UI de paywall/checkout é feita no repositório **chmulato/ETE**.
 

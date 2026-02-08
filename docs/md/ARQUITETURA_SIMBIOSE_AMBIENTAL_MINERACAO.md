@@ -55,7 +55,7 @@ Este documento descreve a **interdependência** entre os módulos ETE Ambiental 
 
 ### 2.2 Modal de pagamento
 
-- Conteúdo alinhado à página estática [upgrade-ouro40.html](https://chmulato.github.io/ETE-releases/upgrade-ouro40.html): Cara-Core Informática, CNPJ PIX 23.969.028/0001-37, instruções (copiar ID, enviar comprovante), link para o portal se necessário.
+- Conteúdo alinhado à página estática [upgrade-ouro40.html](https://chmulato.github.io/caracore-ete-releases/upgrade-ouro40.html): Cara-Core Informática, CNPJ PIX 23.969.028/0001-37, instruções (copiar ID, enviar comprovante), link para o portal se necessário.
 - Botão “Copiar ID de Ativação” → `get_hardware_id()` + copiar para clipboard.
 
 ---
@@ -116,6 +116,6 @@ Este documento descreve a **interdependência** entre os módulos ETE Ambiental 
 ## 6. Referências
 
 - **Paywall e licença:** [LICENCIAMENTO_OURO40_SPEC.md](LICENCIAMENTO_OURO40_SPEC.md) — HID, license.key, gerador de chaves, LGPD.
-- **Página de upgrade (checkout):** [upgrade-ouro40.html](https://chmulato.github.io/ETE-releases/upgrade-ouro40.html) — PIX e instruções ao usuário.
+- **Página de upgrade (checkout):** [upgrade-ouro40.html](https://chmulato.github.io/caracore-ete-releases/upgrade-ouro40.html) — PIX e instruções ao usuário.
 
 A implementação em código (Python, Streamlit, estado global, gatekeeper, audit log, token persistido) é feita no repositório **chmulato/ETE**.

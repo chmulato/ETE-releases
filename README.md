@@ -1,4 +1,4 @@
-# ETE-releases — Sua porta de entrada para o Ouro 4.0
+# caracore-ete-releases — Sua porta de entrada para o Ouro 4.0
 
 **Você está no lugar certo.** Este repositório é o **portal público** do projeto ETE: aqui você encontra o site do Laboratório Ouro 4.0, o instalador do simulador **Minerador 4.0** e todo o material para começar sua jornada em **terras raras**, **química** e **código** — com os pés em **Campo Largo, PR, Brasil**.
 
@@ -45,15 +45,15 @@ Ou seja: **portal + instalador + materiais**. Tudo pensado para você acessar, l
 ## Onde começar? (Seus próximos 20 minutos podem ser assim)
 
 1. **Abrir o portal**  
-   [chmulato.github.io/ETE-releases](https://chmulato.github.io/ETE-releases/)  
+   [chmulato.github.io/caracore-ete-releases](https://chmulato.github.io/caracore-ete-releases/)  
    Lá você encontra a página inicial, links para o Laboratório Campo Largo, apostilas, artigo e o **Canal de Melhorias**. Vale clicar à vontade e explorar.
 
 2. **Baixar o Minerador 4.0 (Windows)**  
-   [Releases → Minerador40.exe](https://github.com/chmulato/ETE-releases/releases)  
+   [Releases → Minerador40.exe](https://github.com/chmulato/caracore-ete-releases/releases)  
    Na página de Releases tem o instalador e, se quiser conferir se o arquivo está íntegro, o checksum (SHA-256). Dentro do release também tem o **INSTALACAO.md** com o passo a passo.
 
 3. **Mandar sua opinião ou sugestão**  
-   [Canal de Melhorias](https://chmulato.github.io/ETE-releases/canal-feedback.html)  
+   [Canal de Melhorias](https://chmulato.github.io/caracore-ete-releases/canal-feedback.html)  
    WhatsApp, Telegram ou e-mail. Sua voz ajuda a melhorar o simulador para todo mundo em Campo Largo e no Brasil. Seus dados são tratados com respeito e em conformidade com a LGPD.
 
 ---
@@ -70,7 +70,7 @@ O projeto nasce da ideia de que **Campo Largo, PR**, pode ser um polo de formaç
 
 - **O que é:** Portal público do projeto ETE + instalador do simulador Minerador 4.0 (terras raras, ETE, 100% offline).
 - **Para quem:** Jovens, futuros universitários ou técnicos e entusiastas que querem um primeiro contato leve e cativante.
-- **Onde:** Site em [chmulato.github.io/ETE-releases](https://chmulato.github.io/ETE-releases/), instalador em [Releases](https://github.com/chmulato/ETE-releases/releases), feedback no [Canal de Melhorias](https://chmulato.github.io/ETE-releases/canal-feedback.html).
+- **Onde:** Site em [chmulato.github.io/caracore-ete-releases](https://chmulato.github.io/caracore-ete-releases/), instalador em [Releases](https://github.com/chmulato/caracore-ete-releases/releases), feedback no [Canal de Melhorias](https://chmulato.github.io/caracore-ete-releases/canal-feedback.html).
 - **Código:** O simulador em si é software proprietário; aqui só há conteúdo de apresentação e o que você baixa para usar.
 
 Se algo não ficou claro ou você quiser sugerir uma melhoria, use o **Canal de Melhorias**. Boa leitura e boa jornada no Ouro 4.0.
